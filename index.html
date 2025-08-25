@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>HTML</title>
+  <title>Logika Perbandingan</title>
   
   <!-- HTML -->
   
@@ -15,40 +15,43 @@
 </head>
 
 <body>
-  <p> latihan21</p>
+  <h1>Logika Perbandingan</h1>
+  
+   <p id="hasil"></p>
+   
   <script>
-    
-    let x = 5
-    let y = 3
-    let z = 100
-    let hasil = x + y + z
-  //  alert(hasil)
-    
-    let a = 4 
-    let b = 6 
-    let nilai =a * b
-    //alert(nilai)
- 
-  let diskon =  prompt('menentukan diskon belanja')
-       if (diskon > 50000) { 
-         alert('selamat! johnson mendapatkan diskon10%')
-       } else if (diskon < 50000) {
-         alert('maaf, johnson belum mendapatkan diskon')
-       }
-       
-       let umur =  prompt('menentukan umur')
-       if (umur < 17) { 
-         alert('kamu masih anak anak')
-       } else if (umur > 17) {
-         alert('kamu sudah dewasa')
-       }
- 
-    
+  const hasil = document.getElementById('hasil')
+  
+  // lebih besar >
+  //hasil.append('7>5=',7>5) // true
+  
+  // lebih kecil <
+//hasil.append('7<9=',7<9)// true
+  
+  // lebih besar atau sama dengan >=
+ // hasil.append(7 >= 7)// true
+ // hasil.append(7 >= 8)// false
+  
+  //lebih kecil atau sama dengan <=
+ // hasil.append(7 <= 8)//true
+  
+  const nilai = prompt ('Berapa nilai kamu?')
+  
+//  if (nilai >= 65) {
+  //    hasil.append('HORE KAMU LULUS')
+  //}else if (nilai < 65) {
+//    hasil.append('WADUH KAMU TIDAK LULUS')
+//  }
+  
+  // operator logika or || dan AND && 
+  if(nilai >= 0 && nilai <50) {
+    hasil.append('KAMU MENDAPAT NILAI C')
+  } else if (nilai >= 50 && nilai <70) {
+    hasil.append('KAMU MENDAPAT NILAI B')
+  }else if (nilai >= 70 && nilai <=100) {
+    hasil.append('KAMU MENDAPAT NILAI A')
+  }
+  
   </script>
-    
-  
-  
-  
-  <script src="main.js"></script>
 </body>
 </html>
